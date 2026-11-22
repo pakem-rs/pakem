@@ -1,4 +1,4 @@
-use lumina::prelude::*;
+use pakem::prelude::*;
 use serde_json::json;
 
 //                            API ROUTING
@@ -13,7 +13,7 @@ pub fn router() -> Router<AppState> {
 }
 
 /// Endpoint: GET /api
-async fn api_index(req: Request) -> LuminaResult {
+async fn api_index(req: Request) -> PakemResult {
     req.ok(json!({
         "framework": "Lumina Framework",
         "tagline": "The High-Performance Rust Backend for Modern APIs",
@@ -27,7 +27,7 @@ async fn api_index(req: Request) -> LuminaResult {
 }
 
 /// Endpoint: GET /api/health
-async fn api_health(req: Request) -> LuminaResult {
+async fn api_health(req: Request) -> PakemResult {
     let db_status = if let Some(pool) = &req.state.db {
         if sqlx::query("SELECT 1").execute(&pool.pool).await.is_ok() {
             "connected"
@@ -46,7 +46,7 @@ async fn api_health(req: Request) -> LuminaResult {
 }
 
 /// Endpoint: GET /api/v1
-async fn api_v1_index(req: Request) -> LuminaResult {
+async fn api_v1_index(req: Request) -> PakemResult {
     req.ok(json!({
         "version": "v1",
         "message": "Lumina API v1 is ready. Register your controllers in src/routes/api.rs!"

@@ -7,7 +7,7 @@ pub mod requests;
 /// `use crate::app::prelude::*;`
 #[allow(unused_imports)]
 pub mod prelude {
-    pub use lumina::prelude::*;
+    pub use pakem::prelude::*;
     pub use crate::app::models::*;
     pub use crate::app::requests::*;
 }

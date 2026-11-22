@@ -1,7 +1,7 @@
 mod app;
 mod routes;
 
-use lumina::prelude::*;
+use pakem::prelude::*;
 
 //                  LUMINA FRAMEWORK APPLICATION ENTRYPOINT
 // High-performance, elegant Rust web backend & API engine.
