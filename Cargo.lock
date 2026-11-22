@@ -1832,7 +1832,8 @@ dependencies = [
 [[package]]
 name = "indonesian-script"
 version = "0.1.2"
-source = "git+https://github.com/lumina-java/framework.git?branch=0.x#e04a930594d073eeef002472547681bb3106d494"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "755622df477c7794f613208d508c52433f4802f19b1d8a1f9d170a6257e9b40c"
 dependencies = [
  "clap",
  "regex",
@@ -2023,83 +2024,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0fae87c125b03c1d2c0150c90365d7d6bcc53fb73a9acaef207d2d065860f062"
 dependencies = [
  "imgref",
-]
-
-[[package]]
-name = "lumina-app"
-version = "0.4.0"
-dependencies = [
- "async-trait",
- "axum",
- "chrono",
- "dotenv",
- "lumina-framework",
- "serde",
- "serde_json",
- "sqlx",
- "tokio",
-]
-
-[[package]]
-name = "lumina-framework"
-version = "0.4.0"
-source = "git+https://github.com/lumina-java/framework.git?branch=0.x#e04a930594d073eeef002472547681bb3106d494"
-dependencies = [
- "async-trait",
- "axum",
- "axum-extra",
- "axum_csrf",
- "bcrypt",
- "chrono",
- "clap",
- "dotenv",
- "futures",
- "hex",
- "hmac",
- "image",
- "indonesian-script",
- "jsonwebtoken",
- "lumina_macros",
- "moka",
- "oauth2",
- "rand 0.8.6",
- "regex",
- "reqwest 0.12.28",
- "rust_decimal",
- "rust_decimal_macros",
- "rustyline",
- "serde",
- "serde_json",
- "serde_urlencoded",
- "sha2",
- "sqlx",
- "subtle",
- "thiserror 2.0.18",
- "time",
- "tokio",
- "tokio-cron-scheduler",
- "tower 0.4.13",
- "tower-http 0.5.2",
- "tower-sessions",
- "tower-sessions-sqlx-store",
- "tracing",
- "tracing-appender",
- "tracing-subscriber",
- "uuid",
- "validator",
- "walkdir",
- "wasmi",
- "zip",
-]
-
-[[package]]
-name = "lumina_macros"
-version = "0.1.4"
-source = "git+https://github.com/lumina-java/framework.git?branch=0.x#e04a930594d073eeef002472547681bb3106d494"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.117",
 ]
 
 [[package]]
@@ -2515,6 +2439,86 @@ dependencies = [
  "libc",
  "pkg-config",
  "vcpkg",
+]
+
+[[package]]
+name = "pakem"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "92c7615685c74f6b3b3f143b6fb7860e238d816276652be93055462762079e60"
+dependencies = [
+ "async-trait",
+ "axum",
+ "axum-extra",
+ "axum_csrf",
+ "bcrypt",
+ "chrono",
+ "clap",
+ "dotenv",
+ "futures",
+ "hex",
+ "hmac",
+ "image",
+ "indonesian-script",
+ "jsonwebtoken",
+ "moka",
+ "oauth2",
+ "pakem_macros",
+ "rand 0.8.6",
+ "regex",
+ "reqwest 0.12.28",
+ "rust_decimal",
+ "rust_decimal_macros",
+ "rustyline",
+ "serde",
+ "serde_json",
+ "serde_urlencoded",
+ "sha2",
+ "sqlx",
+ "subtle",
+ "thiserror 2.0.18",
+ "time",
+ "tokio",
+ "tokio-cron-scheduler",
+ "tower 0.4.13",
+ "tower-http 0.5.2",
+ "tower-sessions",
+ "tower-sessions-sqlx-store",
+ "tracing",
+ "tracing-appender",
+ "tracing-subscriber",
+ "url",
+ "uuid",
+ "validator",
+ "walkdir",
+ "wasmi",
+ "zip",
+]
+
+[[package]]
+name = "pakem-app"
+version = "0.4.0"
+dependencies = [
+ "async-trait",
+ "axum",
+ "chrono",
+ "dotenv",
+ "pakem",
+ "serde",
+ "serde_json",
+ "sqlx",
+ "tokio",
+]
+
+[[package]]
+name = "pakem_macros"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "81ce08df7a8169d877aa62f4e6b5a128b1c69275801ba47a4100487251be0db0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.117",
 ]
 
 [[package]]

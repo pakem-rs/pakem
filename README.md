@@ -32,7 +32,7 @@ Rust terkenal dengan kecepatan ekstrem dan keamanannya, namun sering kali memili
 
 - ⚡ **Supercharged Tokio + Axum Core** — Performa HTTP async tinggi dengan konsumsi resource yang sangat hemat.
 - 🏗️ **Arsitektur MVC Lengkap** — Pembagian layer yang rapi: Controllers, Models, Services, Requests, Views, dan Providers.
-- 🗄️ **Human ORM & Macro-based Models** — Gunakan `#[derive(LuminaModel)]` untuk mendapatkan fungsi CRUD otomatis, pagination (`LengthAwarePaginator`), eager loading, soft deletes, dan query builder lancar (*fluent*).
+- 🗄️ **Human ORM & Macro-based Models** — Gunakan `#[derive(PakemModel)]` untuk mendapatkan fungsi CRUD otomatis, pagination (`LengthAwarePaginator`), eager loading, soft deletes, dan query builder lancar (*fluent*).
 - 🏭 **Model Factory & Faker Engine** — Generator data tiruan (*mock / seeding*) berkecepatan tinggi dengan lokalisasi Indonesia & internasional serta chaining fluen ala Laravel (`User::factory().count(100).create(db).await`).
 - 🔄 **Universal Multi-Database Layer** — Dukungan langsung untuk **PostgreSQL**, **MySQL**, dan **SQLite** dengan auto-migration runner serta generator database flag di CLI (`--db`).
 - 🪄 **Lumina Smart CLI (`lumina`)** — Buat project baru dengan preset database, controller, model, factory (`make:factory`), audit keamanan (`audit`), autentikasi instan (`make:auth`), plugin WASM, dan modul CRUD lengkap (`make:crud`).
@@ -159,9 +159,9 @@ CREATE INDEX IF NOT EXISTS idx_contacts_deleted_at ON contacts(deleted_at);
 ```rust
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
-use lumina::prelude::*;
+use pakem::prelude::*;
 
-#[derive(Debug, Serialize, Deserialize, FromRow, Clone, Default, LuminaModel)]
+#[derive(Debug, Serialize, Deserialize, FromRow, Clone, Default, PakemModel)]
 #[table("contacts")]
 pub struct Contact {
     pub id: i64,
@@ -202,7 +202,7 @@ pub struct CreateContactRequest {
 Dengan fitur **Lumina Eloquent ORM** dan **Unified Request Response**, Controller Anda sangat elegan, ekspresif, dan bebas dari boilerplate:
 
 ```rust
-use lumina::prelude::*;
+use pakem::prelude::*;
 use crate::app::models::contact::Contact;
 use crate::app::requests::contact_request::CreateContactRequest;
 
@@ -211,20 +211,20 @@ pub struct ContactController;
 impl ContactController {
     /// GET /api/contacts — Ambil seluruh daftar kontak
     /// GET /api/contacts — Ambil seluruh daftar kontak
-    pub async fn api_index(req: Request) -> LuminaResult {
+    pub async fn api_index(req: Request) -> PakemResult {
         let contacts = Contact::all(req.db()).await?;
         req.ok(contacts)
     }
 
     /// GET /api/contacts/paged — Paginasi instan (otomatis membaca ?page=X&per_page=Y)
-    pub async fn api_paginate(req: Request) -> LuminaResult {
+    pub async fn api_paginate(req: Request) -> PakemResult {
         let (page, per_page) = req.pagination();
         let paginator = Contact::paginate(req.db(), page, per_page).await?;
         req.paginate(paginator)
     }
 
     /// GET /api/contacts/:id — Ambil detail satu kontak
-    pub async fn api_show(req: Request) -> LuminaResult {
+    pub async fn api_show(req: Request) -> PakemResult {
         let id = req.id_or_fail()?;
         match Contact::find(req.db(), id).await? {
             Some(contact) => req.ok(contact),
@@ -236,7 +236,7 @@ impl ContactController {
     pub async fn api_store(
         req: Request,
         ValidatedJson(payload): ValidatedJson<CreateContactRequest>,
-    ) -> LuminaResult {
+    ) -> PakemResult {
         let mut contact = Contact {
             name: payload.name,
             email: payload.email,
@@ -254,7 +254,7 @@ impl ContactController {
     pub async fn api_update(
         req: Request,
         ValidatedJson(payload): ValidatedJson<CreateContactRequest>,
-    ) -> LuminaResult {
+    ) -> PakemResult {
         let id = req.id_or_fail()?;
         let mut contact = match Contact::find(req.db(), id).await? {
             Some(c) => c,
@@ -270,7 +270,7 @@ impl ContactController {
     }
 
     /// DELETE /api/contacts/:id — Soft delete kontak
-    pub async fn api_destroy(req: Request) -> LuminaResult {
+    pub async fn api_destroy(req: Request) -> PakemResult {
         let id = req.id_or_fail()?;
         if Contact::destroy(req.db(), id).await? {
             req.success(serde_json::json!({ "id": id }), "Kontak berhasil dihapus")
@@ -283,7 +283,7 @@ impl ContactController {
 
 ### 6. Pendaftaran Routes (`src/routes/api.rs`)
 ```rust
-use lumina::prelude::*;
+use pakem::prelude::*;
 use crate::app::controllers::contact_controller::ContactController;
 
 pub fn router() -> Router<AppState> {
@@ -365,7 +365,7 @@ Dokumentasi resmi Lumina disusun secara berseri (*12 episode/modul*) yang terstr
 | **01** | [**Persyaratan Sistem & Instalasi**](./docs/documentations/01_instalasi_dan_persyaratan.md) | Requirement Rust, CLI global, `lumina new --db`, struktur folder MVC, `.env`, `lumina serve`. |
 | **02** | [**Routing & Middleware**](./docs/documentations/02_routing_dan_middleware.md) | Rute HTTP, parameter URL, group & prefix, custom middleware, security headers, rate limiting, CSRF. |
 | **03** | [**Controller & Request Handling**](./docs/documentations/03_controller_dan_request.md) | `make:controller`, Dependency Injection, Form/JSON payload, `make:request` (validasi), file upload. |
-| **04** | [**Model & Eloquent ORM**](./docs/documentations/04_model_dan_eloquent_orm.md) | `make:model`, migrasi, `#[derive(LuminaModel)]`, CRUD, Query Builder, pagination, relasi 1-baris. |
+| **04** | [**Model & Eloquent ORM**](./docs/documentations/04_model_dan_eloquent_orm.md) | `make:model`, migrasi, `#[derive(PakemModel)]`, CRUD, Query Builder, pagination, relasi 1-baris. |
 | **05** | [**Blade Template Engine**](./docs/documentations/05_blade_template_engine.md) | Layout inheritance (`@extends`, `@section`), looping `@foreach`, pipeline filter `\| rupiah`, `@wasm`, `@eval_is`. |
 | **06** | [**WASM Sandbox & Plugin**](./docs/documentations/06_wasm_sandbox_dan_plugin.md) | Arsitektur WASM Native Hybrid (`wasmi 2.0`), fault isolation, `plugin:new`, `plugin:build`, ABI bridge. |
 | **07** | [**Indonesian Script (.is)**](./docs/documentations/07_indonesian_script.md) | Skrip backend natural (`fungsi`, `jika`, `selama`), built-in helpers, eksekusi di Controller & Blade. |

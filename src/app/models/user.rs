@@ -1,13 +1,13 @@
 #![allow(dead_code)]
 use serde::{Serialize, Deserialize};
 use sqlx::FromRow;
-use lumina::prelude::*;
+use pakem::prelude::*;
 
 //                            USER MODEL
 // Di Laravel, ini adalah class Eloquent (`User extends Model`).
-// Cukup tambahkan `#[derive(LuminaModel)]` untuk mendapatkan fungsi CRUD otomatis:
+// Cukup tambahkan `#[derive(PakemModel)]` untuk mendapatkan fungsi CRUD otomatis:
 // `User::find(id)`, `User::all()`, dll.
-#[derive(Debug, Serialize, Deserialize, FromRow, Clone, Default, LuminaModel)]
+#[derive(Debug, Serialize, Deserialize, FromRow, Clone, Default, PakemModel)]
 #[table("users")]
 pub struct User {
     pub id: i64,

@@ -1,21 +1,21 @@
 [workspace]
 
 [package]
-name = "lumina-app"
+name = "pakem-app"
 version = "0.4.0"
 edition = "2021"
-default-run = "lumina-server"
+default-run = "pakem-server"
 
 [lib]
-name = "lumina_app"
+name = "pakem_app"
 path = "src/lib.rs"
 
 [[bin]]
-name = "lumina-server"
+name = "pakem-server"
 path = "src/main.rs"
 
 [dependencies]
-lumina = { package = "lumina-framework", version = "0.4.0", git = "https://github.com/lumina-java/framework.git", branch = "0.x" }
+pakem = "1.0"
 tokio = { version = "1", features = ["full"] }
 axum = { version = "0.7", features = ["macros", "multipart"] }
 serde = { version = "1", features = ["derive"] }
