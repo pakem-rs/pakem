@@ -2,7 +2,7 @@ use pakem::prelude::*;
 use crate::app::models::user::User;
 
 // =========================================================================
-//  UserFactory (Lumina Model Factory)
+//  UserFactory (Pakem Model Factory)
 // =========================================================================
 
 pub struct UserFactory;

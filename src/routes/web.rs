@@ -6,7 +6,7 @@ use crate::app::controllers::welcome_controller::WelcomeController;
 
 pub fn router() -> Router<AppState> {
     Router::new()
-        // Halaman Utama Lumina (Dual Mode: HTML Dashboard di browser / JSON di API)
+        // Halaman Utama Pakem (Dual Mode: HTML Dashboard di browser / JSON di API)
         .get("/", WelcomeController::index)
         
         // Rute autentikasi

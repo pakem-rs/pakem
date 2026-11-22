@@ -2,7 +2,7 @@
 
 [package]
 name = "pakem-app"
-version = "0.4.0"
+version = "1.0.1"
 edition = "2021"
 default-run = "pakem-server"
 
@@ -15,7 +15,7 @@ name = "pakem-server"
 path = "src/main.rs"
 
 [dependencies]
-pakem = "1.0"
+pakem = "1.0.1"
 tokio = { version = "1", features = ["full"] }
 axum = { version = "0.7", features = ["macros", "multipart"] }
 serde = { version = "1", features = ["derive"] }

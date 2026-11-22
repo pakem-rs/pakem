@@ -7,7 +7,7 @@
     <div class="max-w-md w-full bg-slate-900/60 border border-slate-800/80 rounded-3xl p-10 backdrop-filter backdrop-blur-md shadow-2xl relative z-10">
         <div class="text-center mb-8">
             <h2 class="text-3xl font-extrabold heading-font text-white">Create Account</h2>
-            <p class="text-slate-400 mt-2 text-sm">Get started with the Lumina ecosystem</p>
+            <p class="text-slate-400 mt-2 text-sm">Get started with the Pakem ecosystem</p>
         </div>
         
         <form action="/register" method="POST" class="space-y-6">

@@ -5,11 +5,11 @@ Cargo.lock
 # Environment
 .env
 
-# Lumina Logs & Cache
+# Pakem Logs & Cache
 storage/logs/*.log
 storage/cache/*
 !storage/cache/.gitkeep
-.lumina_tinker_history
+.pakem_tinker_history
 
 # Database
 *.db

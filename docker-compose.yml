@@ -1,11 +1,11 @@
 version: "3.9"
 
 services:
-  lumina-clean:
+  pakem-app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: lumina-clean-app
+    container_name: pakem-app
     restart: unless-stopped
     ports:
       - "8000:8000"
@@ -18,8 +18,8 @@ services:
       - APP_ENV=production
       - APP_PORT=8000
     networks:
-      - lumina-net
+      - pakem-net
 
 networks:
-  lumina-net:
+  pakem-net:
     driver: bridge

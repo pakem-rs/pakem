@@ -15,9 +15,9 @@ pub fn router() -> Router<AppState> {
 /// Endpoint: GET /api
 async fn api_index(req: Request) -> PakemResult {
     req.ok(json!({
-        "framework": "Lumina Framework",
+        "framework": "Pakem Framework",
         "tagline": "The High-Performance Rust Backend for Modern APIs",
-        "version": "0.3.0",
+        "version": "1.0.1",
         "status": "online",
         "endpoints": {
             "health": "/api/health",
@@ -49,6 +49,6 @@ async fn api_health(req: Request) -> PakemResult {
 async fn api_v1_index(req: Request) -> PakemResult {
     req.ok(json!({
         "version": "v1",
-        "message": "Lumina API v1 is ready. Register your controllers in src/routes/api.rs!"
+        "message": "Pakem API v1 is ready. Register your controllers in src/routes/api.rs!"
     }))
 }

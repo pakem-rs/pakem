@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default("Lumina Framework") }}</title>
+    <title>{{ title | default("Pakem Framework") }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,8 +47,8 @@
                             <span class="text-white font-black heading-font text-xl">⚡</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="text-xl font-bold tracking-tight text-white heading-font">Lumina</span>
-                            <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Backend</span>
+                            <span class="text-xl font-bold tracking-tight text-white heading-font">Pakem</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Framework</span>
                         </div>
                     </a>
                 </div>
@@ -57,8 +57,8 @@
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         API Endpoints
                     </a>
-                    <a href="https://github.com/lumina-java/framework" target="_blank" class="text-slate-300 hover:text-indigo-400 font-medium text-sm transition">Docs</a>
-                    <a href="https://github.com/lumina-java/framework" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-indigo-500/20 transition-all">GitHub Repo</a>
+                    <a href="https://pakem.my.id" target="_blank" class="text-slate-300 hover:text-indigo-400 font-medium text-sm transition">Docs</a>
+                    <a href="https://github.com/pakem-rs/framework" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-indigo-500/20 transition-all">GitHub Repo</a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
     <footer class="border-t border-slate-900 bg-black/60 py-8">
         <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-2">
-                <span>&copy; 2026 <strong>Lumina Framework</strong>. All rights reserved.</span>
+                <span>&copy; 2026 <strong>Pakem Framework</strong>. All rights reserved.</span>
             </div>
             <div class="flex items-center gap-1.5 text-slate-400">
                 Engineered with <span class="text-red-500">❤️</span> in <strong>Rust</strong> (Axum 0.7 + Tokio) for ultra-fast APIs.

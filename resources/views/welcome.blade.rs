@@ -11,21 +11,21 @@
         <div class="text-center max-w-4xl mx-auto">
             <div class="inline-flex items-center gap-2 py-1 px-3.5 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/25 mb-6 uppercase tracking-wider shadow-inner">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                <span>Lumina v{{ version }} • High-Performance Rust Backend Engine</span>
+                <span>Pakem v{{ version }} • High-Performance Rust Backend Engine</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 heading-font leading-tight">
                 The <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">Elegance</span> of Laravel.<br>
                 The <span class="text-white underline decoration-indigo-500 decoration-wavy decoration-2">Raw Speed</span> of Rust.
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Lumina is a developer-first Rust web framework specifically built for modern <strong>Backend APIs</strong>, microservices, and enterprise applications. Enjoy seamless routing, unified database pooling, and rapid scaffolding.
+                Pakem is a developer-first Rust web framework specifically built for modern <strong>Backend APIs</strong>, microservices, and enterprise applications. Enjoy seamless routing, unified database pooling, and rapid scaffolding.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="/api" target="_blank" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-7 py-3.5 rounded-xl font-bold hover:shadow-lg hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
                     <span>🚀 Inspect API Spec</span>
                     <span class="text-xs bg-black/30 px-2 py-0.5 rounded-md mono-font">GET /api</span>
                 </a>
-                <a href="https://github.com/lumina-java/framework" target="_blank" class="bg-slate-900/80 text-slate-200 border border-slate-800 px-7 py-3.5 rounded-xl font-semibold hover:bg-slate-800 hover:text-white transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                <a href="https://pakem.my.id" target="_blank" class="bg-slate-900/80 text-slate-200 border border-slate-800 px-7 py-3.5 rounded-xl font-semibold hover:bg-slate-800 hover:text-white transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
                     <span>📖 Documentation</span>
                 </a>
             </div>
@@ -36,7 +36,7 @@
             <div class="glass-card rounded-2xl p-5 text-left">
                 <div class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">Framework Version</div>
                 <div class="text-xl font-bold text-white heading-font flex items-center gap-2">
-                    <span>Lumina {{ version }}</span>
+                    <span>Pakem {{ version }}</span>
                 </div>
                 <div class="text-xs text-indigo-400 mt-1">Rust {{ rust_edition }} Edition</div>
             </div>
@@ -101,14 +101,14 @@
                     <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">2. JSON Response yang Dihasilkan:</div>
                     <pre class="bg-black/90 rounded-2xl p-4 border border-slate-800 mono-font text-xs text-emerald-400 overflow-x-auto leading-relaxed">
 {
-  <span class="text-slate-400">"name"</span>: <span class="text-amber-300">"Lumina Framework"</span>,
+  <span class="text-slate-400">"name"</span>: <span class="text-amber-300">"Pakem Framework"</span>,
   <span class="text-slate-400">"version"</span>: <span class="text-amber-300">"{{ version }}"</span>,
   <span class="text-slate-400">"engine"</span>: <span class="text-amber-300">"Axum 0.7 + Tokio Async"</span>,
   <span class="text-slate-400">"database"</span>: {
     <span class="text-slate-400">"driver"</span>: <span class="text-amber-300">"{{ db_driver }}"</span>,
     <span class="text-slate-400">"status"</span>: <span class="text-amber-300">"{{ db_status }}"</span>
   },
-  <span class="text-slate-400">"documentation"</span>: <span class="text-amber-300">"https://github.com/lumina-java/framework"</span>
+  <span class="text-slate-400">"documentation"</span>: <span class="text-amber-300">"https://pakem.my.id"</span>
 }</pre>
                 </div>
             </div>
@@ -150,8 +150,8 @@
                 <p class="text-slate-400 text-sm leading-relaxed mb-4">
                     Tulis model database semudah di Laravel Eloquent dengan makro sakti <code class="mono-font bg-slate-900 text-indigo-300 px-1 rounded">#[derive(PakemModel)]</code>. Otomatis menyediakan <code class="mono-font text-indigo-300">all()</code>, <code class="mono-font text-indigo-300">find(id)</code>, dan CRUD.
                 </p>
-                <a href="https://github.com/lumina-java/framework#models" target="_blank" class="text-xs font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1">
-                    Pelajari Makro Model <span>&rarr;</span>
+                <a href="https://pakem.my.id" target="_blank" class="text-xs font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1">
+                    <span>Pelajari Makro Model <span>&rarr;</span></span>
                 </a>
             </div>
         </div>
@@ -184,7 +184,7 @@ pub fn router() -> Router&lt;AppState&gt; {
 async fn get_products() -> impl IntoResponse {
     Json(serde_json::json!({
         "status": "success",
-        "data": ["Rust", "Axum", "Lumina"]
+        "data": ["Rust", "Axum", "Pakem"]
     }))
 }</pre>
                     </div>

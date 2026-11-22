@@ -11,8 +11,8 @@ RUN --mount=type=cache,target=/usr/local/cargo/registry \
     --mount=type=cache,target=/usr/local/cargo/git \
     --mount=type=cache,target=/app/target \
     cargo build --release && \
-    (cp /app/target/release/lumina_clean-server /app/server 2>/dev/null || \
-     cp /app/target/release/lumina_clean /app/server 2>/dev/null || \
+    (cp /app/target/release/pakem-server /app/server 2>/dev/null || \
+     cp /app/target/release/pakem-app /app/server 2>/dev/null || \
      find /app/target/release/ -maxdepth 1 -type f -executable ! -name "*.so" ! -name "*.d" -exec cp {} /app/server \; )
 
 # ─── Stage 2: Runtime Stage ──────────────────────────────────────────────────────────

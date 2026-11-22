@@ -237,7 +237,7 @@
     <div class="glow-2"></div>
 
     <header>
-        <div class="logo">Lumina</div>
+        <div class="logo">Pakem</div>
         <nav class="nav-links">
             <a href="/">Home</a>
             <a href="/about">About</a>
@@ -248,18 +248,18 @@
         <h1>About the Framework</h1>
 
         <div class="philosophy">
-            <h2>The Lumina Philosophy</h2>
+            <h2>The Pakem Philosophy</h2>
             <p>
-                Lumina was born out of a desire to bring the elegant, rapid-development experience of frameworks like Laravel and Rails directly to the ultra-efficient, safe world of Rust.
+                Pakem was born out of a desire to bring the elegant, rapid-development experience of frameworks like Laravel and Rails directly to the ultra-efficient, safe world of Rust.
             </p>
             <p>
-                We believe developers shouldn't have to choose between speed of development and execution performance. Lumina combines ergonomic MVC architecture with Rust's uncompromising safety and performance.
+                We believe developers shouldn't have to choose between speed of development and execution performance. Pakem combines ergonomic MVC architecture with Rust's uncompromising safety and performance.
             </p>
 
             <div class="pillars">
                 <div class="pillar">
                     <h3>🎨 Dev-First Ergonomics</h3>
-                    <p>Designed with intuitive routing, clear request-handling structures, and a beautiful templating engine, Lumina feels familiar from day one.</p>
+                    <p>Designed with intuitive routing, clear request-handling structures, and a beautiful templating engine, Pakem feels familiar from day one.</p>
                 </div>
                 <div class="pillar">
                     <h3>🔒 Strict Type Safety</h3>
@@ -282,7 +282,7 @@
     </main>
 
     <footer>
-        <div>© 2026 Lumina Engine. All rights reserved.</div>
+        <div>© 2026 Pakem Engine. All rights reserved.</div>
         <div>Engineered with ❤️ in Rust.</div>
     </footer>
 </body>

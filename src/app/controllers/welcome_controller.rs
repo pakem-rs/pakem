@@ -2,7 +2,7 @@ use pakem::prelude::*;
 use serde_json::json;
 
 //                        WELCOME CONTROLLER
-// Controller halaman utama aplikasi Lumina.
+// Controller halaman utama aplikasi Pakem.
 // Mendukung Dual-Mode Response:
 // 1. Browser Request (Accept: text/html) -> Mengembalikan Dashboard HTML modern ala Laravel.
 // 2. API / cURL Request (Accept: application/json atau ?format=json) -> Mengembalikan JSON ala Lumen!
@@ -28,9 +28,9 @@ impl WelcomeController {
 
         if wants_json {
             return axum::Json(json!({
-                "name": "Lumina Framework",
+                "name": "Pakem Framework",
                 "tagline": "The High-Performance Rust Backend for Modern APIs",
-                "version": "0.3.0",
+                "version": "1.0.1",
                 "rust_edition": "2021",
                 "engine": "Axum 0.7 + Tokio Async",
                 "environment": "local",
@@ -38,7 +38,7 @@ impl WelcomeController {
                     "driver": db_info.0,
                     "status": db_info.1
                 },
-                "documentation": "https://github.com/lumina-java/framework",
+                "documentation": "https://pakem.my.id",
                 "endpoints": {
                     "home": "/",
                     "health": "/health",
@@ -50,13 +50,13 @@ impl WelcomeController {
 
         // 2. Jika diakses via Web Browser biasa, render Blade HTML Dashboard
         req.view("welcome")
-            .with("title", "Lumina Framework - High Performance Rust Backend")
-            .with("app_name", "Lumina Framework")
-            .with("version", "0.3.0")
+            .with("title", "Pakem Framework - Look like Laravel, Run at Rust Speed")
+            .with("app_name", "Pakem Framework")
+            .with("version", "1.0.1")
             .with("rust_edition", "2021")
             .with("db_driver", db_info.0)
             .with("db_status", db_info.1)
-            .with("docs_url", "https://github.com/lumina-java/framework")
+            .with("docs_url", "https://pakem.my.id")
             .render(req)
             .await
             .into_response()
@@ -65,7 +65,7 @@ impl WelcomeController {
     /// Menampilkan Halaman Login ("/login")
     pub async fn login(req: Request) -> impl IntoResponse {
         req.view("auth.login")
-            .with("title", "Login - Lumina")
+            .with("title", "Login - Pakem")
             .render(req)
             .await
             .into_response()
@@ -74,7 +74,7 @@ impl WelcomeController {
     /// Menampilkan Halaman Register ("/register")
     pub async fn register(req: Request) -> impl IntoResponse {
         req.view("auth.register")
-            .with("title", "Register - Lumina")
+            .with("title", "Register - Pakem")
             .render(req)
             .await
             .into_response()

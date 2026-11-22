@@ -3,7 +3,7 @@ mod routes;
 
 use pakem::prelude::*;
 
-//                  LUMINA FRAMEWORK APPLICATION ENTRYPOINT
+//                  PAKEM FRAMEWORK APPLICATION ENTRYPOINT
 // High-performance, elegant Rust web backend & API engine.
 
 #[tokio::main]
@@ -16,7 +16,7 @@ async fn main() {
         .with_web(routes::web::router())
         .with_api(routes::api::router());
 
-    println!("⚡ Welcome to Lumina Framework");
+    println!("⚡ Welcome to Pakem Framework");
     println!("🚀 Server running at http://127.0.0.1:8000");
     println!("📖 API Endpoints ready at http://127.0.0.1:8000/api");
 
