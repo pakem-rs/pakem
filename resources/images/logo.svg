@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background subtle glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Main Pakem Gradient: Rust Orange to Batik Crimson to Deep Violet -->
+    <linearGradient id="pakemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="35%" stop-color="#f43f5e"/>
+      <stop offset="70%" stop-color="#c026d3"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+
+    <!-- Canting Molten Gold Flame / Wax Drop Gradient -->
+    <linearGradient id="goldWax" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+
+    <!-- Metallic Edge Highlight -->
+    <linearGradient id="edgeLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Shadow Filter -->
+    <filter id="glowShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#f43f5e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGlow)"/>
+
+  <g filter="url(#glowShadow)">
+    <!-- Main Stem of the letter 'P' (The Handle and Shaft of Canting) -->
+    <path d="M112 88 C112 74.745 122.745 64 136 64 H184 C197.255 64 208 74.745 208 88 V424 C208 437.255 197.255 448 184 448 H136 C122.745 448 112 437.255 112 424 V88 Z" 
+          fill="url(#pakemGrad)"/>
+
+    <!-- Left stem inner highlight bevel -->
+    <path d="M120 88 C120 79.163 127.163 72 136 72 H152 V440 H136 C127.163 440 120 432.837 120 424 V88 Z" 
+          fill="url(#edgeLight)"/>
+
+    <!-- The Bowl of 'P' (Canting Nyamplungan - Reservoir of Molten Batik Wax) -->
+    <path d="M208 64 H312 C382.692 64 440 121.308 440 192 C440 262.692 382.692 320 312 320 H208 V232 H304 C326.091 232 344 214.091 344 192 C344 169.909 326.091 152 304 152 H208 V64 Z" 
+          fill="url(#pakemGrad)"/>
+
+    <!-- The Canting Spout / Speed Cucuk (Pen of the Craftsman reaching forward) -->
+    <path d="M312 232 L432 176 L344 264 Z" 
+          fill="url(#goldWax)"/>
+
+    <!-- The Molten Golden Wax Droplet / Rust Energy Ember (Speed and Precision) -->
+    <path d="M448 160 C448 160 472 184 472 200 C472 213.255 461.255 224 448 224 C434.745 224 424 213.255 424 200 C424 184 448 160 448 160 Z" 
+          fill="url(#goldWax)"/>
+
+    <!-- Decorative Batik Ceplok Star inside the 'P' Counter -->
+    <circle cx="276" cy="192" r="8" fill="#ffffff" opacity="0.9"/>
+    <path d="M276 172 V212 M256 192 H296" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="276" cy="192" r="20" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+  </g>
+</svg>
