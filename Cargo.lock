@@ -2443,9 +2443,9 @@ dependencies = [
 
 [[package]]
 name = "pakem"
-version = "1.0.1"
+version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "92c7615685c74f6b3b3f143b6fb7860e238d816276652be93055462762079e60"
+checksum = "557d47d71f8e2adf9b88f6a17d032c86c405c03ade4e6f432c78bfa987484434"
 dependencies = [
  "async-trait",
  "axum",
@@ -2497,7 +2497,7 @@ dependencies = [
 
 [[package]]
 name = "pakem-app"
-version = "0.4.0"
+version = "1.0.3"
 dependencies = [
  "async-trait",
  "axum",
@@ -2512,9 +2512,9 @@ dependencies = [
 
 [[package]]
 name = "pakem_macros"
-version = "1.0.1"
+version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "81ce08df7a8169d877aa62f4e6b5a128b1c69275801ba47a4100487251be0db0"
+checksum = "e1fa84329658dd2c70c7e814ea954d3575b8a0dff16d0ca545a5ed342d3dad6e"
 dependencies = [
  "proc-macro2",
  "quote",
