@@ -1,7 +1,7 @@
 # 🎨 Pakem Starter Kit
 
 <p align="center">
-  <img src="storage/app/public/assets/logo.png" alt="Pakem Framework Logo" width="180">
+  <img src="resources/images/logo.svg" alt="Pakem Framework Logo" width="160">
 </p>
 
 <p align="center">
