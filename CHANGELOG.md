@@ -6,6 +6,14 @@ Format pencatatan mengacu pada [Keep a Changelog](https://keepachangelog.com/en/
 
 ---
 
+## [1.0.6] - 2026-11-28
+
+### 📦 Sinkronisasi `pakem v1.0.6`
+- Upgrade dependensi inti ke `pakem = "1.0.6"` (termasuk `pakem-derive = "1.0.5"`, `wasmi 2.0.3`, security hardening, dan mode `.without_default_middleware()`).
+- Menyelaraskan tampilan versi `1.0.6` pada `WelcomeController` (HTML & JSON).
+
+---
+
 ## [1.0.5] - 2026-11-27
 
 ### 🎨 Rebranding Welcome & Upgrade Ekosistem 1.0.5

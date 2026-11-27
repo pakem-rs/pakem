@@ -30,7 +30,7 @@ impl WelcomeController {
             return req.json(json!({
                 "name": "Pakem Framework",
                 "tagline": "The High-Performance Rust Backend for Modern APIs",
-                "version": "1.0.5",
+                "version": "1.0.6",
                 "rust_edition": "2024",
                 "engine": "Axum 0.8 + Tokio Async",
                 "environment": "local",
@@ -52,7 +52,7 @@ impl WelcomeController {
         req.view("welcome")
             .with("title", "Pakem Framework - Look like Laravel, Run at Rust Speed")
             .with("app_name", "Pakem Framework")
-            .with("version", "1.0.5")
+            .with("version", "1.0.6")
             .with("rust_edition", "2024")
             .with("db_driver", db_info.0)
             .with("db_status", db_info.1)
