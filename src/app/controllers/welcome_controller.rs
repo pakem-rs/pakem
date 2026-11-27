@@ -27,12 +27,12 @@ impl WelcomeController {
             || req.header("accept").map(|a| a.contains("json")).unwrap_or(false);
 
         if wants_json {
-            return axum::Json(json!({
+            return req.json(json!({
                 "name": "Pakem Framework",
                 "tagline": "The High-Performance Rust Backend for Modern APIs",
-                "version": "1.0.1",
-                "rust_edition": "2021",
-                "engine": "Axum 0.7 + Tokio Async",
+                "version": "1.0.5",
+                "rust_edition": "2024",
+                "engine": "Axum 0.8 + Tokio Async",
                 "environment": "local",
                 "database": {
                     "driver": db_info.0,

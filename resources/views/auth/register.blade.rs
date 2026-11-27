@@ -1,46 +1,72 @@
-@extends('layouts.app')
+@extends('layout')
+
+@section('title')Register - Pakem Framework@endsection
 
 @section('content')
-<div class="min-h-[75vh] flex items-center justify-center px-4 relative">
-    <div class="absolute w-[400px] h-[400px] bg-pink-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-lg border-0 mt-5">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-success">Join Pakem</h2>
+                    <p class="text-muted">Create your account to get started</p>
+                </div>
 
-    <div class="max-w-md w-full bg-slate-900/60 border border-slate-800/80 rounded-3xl p-10 backdrop-filter backdrop-blur-md shadow-2xl relative z-10">
-        <div class="text-center mb-8">
-            <h2 class="text-3xl font-extrabold heading-font text-white">Create Account</h2>
-            <p class="text-slate-400 mt-2 text-sm">Get started with the Pakem ecosystem</p>
+                @if(success_msg)
+                <div class="alert alert-success">{{ success_msg }}</div>
+                @endif
+                @if(error_msg)
+                <div class="alert alert-danger">{{ error_msg }}</div>
+                @endif
+
+                <form action="/auth/register" method="POST">
+                    @csrf
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" name="name" class="form-control form-control-lg @if(errors and errors.name) is-invalid @endif"
+                                placeholder="e.g. Slamet Sugandi" value="{{ old.name | default(value="") }}" required>
+                            @if(errors and errors.name)
+                                <div class="invalid-feedback">{{ errors.name }}</div>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-control form-control-lg @if(errors and errors.email) is-invalid @endif"
+                            placeholder="name@example.com" value="{{ old.email | default(value="") }}" required>
+                        @if(errors and errors.email)
+                            <div class="invalid-feedback">{{ errors.email }}</div>
+                        @endif
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control form-control-lg @if(errors and errors.password) is-invalid @endif"
+                                placeholder="Create password" required>
+                            @if(errors and errors.password)
+                                <div class="invalid-feedback">{{ errors.password }}</div>
+                            @endif
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" name="password_confirmation" class="form-control form-control-lg" placeholder="Repeat password" required>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-success btn-lg rounded-pill">Create Account</button>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <p class="mb-0">Already have an account? <a href="/auth/login" class="text-success fw-bold text-decoration-none">Login</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-        
-        <form action="/register" method="POST" class="space-y-6">
-            @csrf
-            <div>
-                <label class="block text-sm font-semibold text-slate-300 mb-2">Full Name</label>
-                <input type="text" name="name" value="{{ old('name') }}" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition" placeholder="John Doe" required>
-                @error('name')
-                <span class="text-xs text-rose-400 mt-1.5 block font-medium">{{ $message }}</span>
-                @enderror
-            </div>
-            <div>
-                <label class="block text-sm font-semibold text-slate-300 mb-2">Email Address</label>
-                <input type="email" name="email" value="{{ old('email') }}" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition" placeholder="you@example.com" required>
-                @error('email')
-                <span class="text-xs text-rose-400 mt-1.5 block font-medium">{{ $message }}</span>
-                @enderror
-            </div>
-            <div>
-                <label class="block text-sm font-semibold text-slate-300 mb-2">Password</label>
-                <input type="password" name="password" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition" placeholder="••••••••" required>
-                @error('password')
-                <span class="text-xs text-rose-400 mt-1.5 block font-medium">{{ $message }}</span>
-                @enderror
-            </div>
-            <button type="submit" class="w-full bg-indigo-600 text-white py-3.5 rounded-xl font-bold hover:bg-indigo-500 shadow-lg shadow-indigo-600/20 transition transform active:scale-98">
-                Create Account
-            </button>
-        </form>
-        
-        <p class="text-center text-sm text-slate-400 mt-8">
-            Already have an account? <a href="/login" class="text-indigo-400 font-bold hover:underline">Sign In</a>
-        </p>
     </div>
 </div>
 @endsection
