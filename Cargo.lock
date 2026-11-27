@@ -2406,8 +2406,6 @@ checksum = "c08d65885ee38876c4f86fa503fb49d7b507c2b62552df7c70b2fce627e06381"
 [[package]]
 name = "pakem"
 version = "1.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "196c205e425e4f1b05c30ef6fe480297d412ac469cf543721123bbb9f63ca80f"
 dependencies = [
  "async-trait",
  "axum",
@@ -2426,7 +2424,7 @@ dependencies = [
  "moka",
  "oauth2",
  "pakem-blade",
- "pakem_macros",
+ "pakem-macros",
  "rand 0.8.6",
  "regex",
  "reqwest 0.12.28",
@@ -2476,8 +2474,6 @@ dependencies = [
 [[package]]
 name = "pakem-blade"
 version = "1.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7e86d0d75b809418e309550e294d4d805ee4e2993722f872430032091558b041"
 dependencies = [
  "chrono",
  "indonesian-script",
@@ -2487,10 +2483,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "pakem_macros"
+name = "pakem-macros"
 version = "1.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e275777019d115a0778d04a1b5fe42ae59f21eef921656040c18b06f663dc388"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -5417,3 +5411,7 @@ checksum = "27bc9d5b815bc103f142aa054f561d9187d191692ec7c2d1e2b4737f8dbd7296"
 dependencies = [
  "zune-core",
 ]
+
+[[patch.unused]]
+name = "pakem-live"
+version = "1.0.5"

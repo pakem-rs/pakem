@@ -43,8 +43,27 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-3">
                     <a href="/" class="flex items-center space-x-3">
-                        <div class="w-9 h-9 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/25">
-                            <span class="text-white font-black heading-font text-xl">⚡</span>
+                        <div class="w-9 h-9 rounded-xl bg-slate-900/90 border border-slate-700/70 p-1 flex items-center justify-center shadow-lg shadow-rose-500/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="pakemNavGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#fb923c"/>
+                                        <stop offset="35%" stop-color="#f43f5e"/>
+                                        <stop offset="70%" stop-color="#c026d3"/>
+                                        <stop offset="100%" stop-color="#4f46e5"/>
+                                    </linearGradient>
+                                    <linearGradient id="pakemNavGold" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#f59e0b"/>
+                                        <stop offset="50%" stop-color="#fbbf24"/>
+                                        <stop offset="100%" stop-color="#fef08a"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M112 88 C112 74.745 122.745 64 136 64 H184 C197.255 64 208 74.745 208 88 V424 C208 437.255 197.255 448 184 448 H136 C122.745 448 112 437.255 112 424 V88 Z" fill="url(#pakemNavGrad)"/>
+                                <path d="M208 64 H312 C382.692 64 440 121.308 440 192 C440 262.692 382.692 320 312 320 H208 V232 H304 C326.091 232 344 214.091 344 192 C344 169.909 326.091 152 304 152 H208 V64 Z" fill="url(#pakemNavGrad)"/>
+                                <path d="M312 232 L432 176 L344 264 Z" fill="url(#pakemNavGold)"/>
+                                <path d="M448 160 C448 160 472 184 472 200 C472 213.255 461.255 224 448 224 C434.745 224 424 213.255 424 200 C424 184 448 160 448 160 Z" fill="url(#pakemNavGold)"/>
+                                <circle cx="276" cy="192" r="8" fill="#ffffff" opacity="0.9"/>
+                            </svg>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="text-xl font-bold tracking-tight text-white heading-font">Pakem</span>
@@ -76,7 +95,7 @@
                 <span>&copy; 2026 <strong>Pakem Framework</strong>. All rights reserved.</span>
             </div>
             <div class="flex items-center gap-1.5 text-slate-400">
-                Engineered with <span class="text-red-500">❤️</span> in <strong>Rust</strong> (Axum 0.7 + Tokio) for ultra-fast APIs.
+                Engineered with <span class="text-red-500">❤️</span> in <strong>Rust</strong> (Axum 0.8 + Tokio) for ultra-fast APIs.
             </div>
         </div>
     </footer>

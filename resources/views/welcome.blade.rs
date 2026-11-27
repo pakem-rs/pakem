@@ -14,11 +14,11 @@
                 <span>Pakem v{{ version }} • High-Performance Rust Backend Engine</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 heading-font leading-tight">
-                The <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">Elegance</span> of Laravel.<br>
-                The <span class="text-white underline decoration-indigo-500 decoration-wavy decoration-2">Raw Speed</span> of Rust.
+                Crafted with <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-rose-400 to-indigo-400">Canting</span> Precision.<br>
+                Driven by the <span class="text-white underline decoration-amber-400 decoration-wavy decoration-2">Raw Speed</span> of Rust.
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Pakem is a developer-first Rust web framework specifically built for modern <strong>Backend APIs</strong>, microservices, and enterprise applications. Enjoy seamless routing, unified database pooling, and rapid scaffolding.
+                Lahir dari Kota Batik Pekalongan, <strong>Pakem</strong> menenun ketelitian seni canting ke dalam arsitektur <strong>Backend APIs</strong>, microservices, dan aplikasi enterprise—memadukan keindahan pola yang rapi dengan performa murni Rust.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="/api" target="_blank" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-7 py-3.5 rounded-xl font-bold hover:shadow-lg hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -43,7 +43,7 @@
 
             <div class="glass-card rounded-2xl p-5 text-left">
                 <div class="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">Runtime Engine</div>
-                <div class="text-xl font-bold text-white heading-font">Axum 0.7</div>
+                <div class="text-xl font-bold text-white heading-font">Axum 0.8</div>
                 <div class="text-xs text-emerald-400 mt-1">Tokio Multi-Threaded Async</div>
             </div>
 
@@ -69,7 +69,7 @@
                 <div>
                     <div class="flex items-center gap-2">
                         <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-pink-500/20 text-pink-300 border border-pink-500/30">Dual-Mode API</span>
-                        <h2 class="text-xl font-bold text-white heading-font">Lumen-Style Headless JSON Response</h2>
+                        <h2 class="text-xl font-bold text-white heading-font">Pakem Headless JSON Response</h2>
                     </div>
                     <p class="text-slate-400 text-sm mt-1">Kirim header <code class="mono-font bg-slate-900 text-indigo-300 px-1.5 py-0.5 rounded">Accept: application/json</code> ke URL root (<code class="mono-font text-indigo-300">/</code>) untuk langsung menerima JSON spec.</p>
                 </div>
@@ -103,7 +103,7 @@
 {
   <span class="text-slate-400">"name"</span>: <span class="text-amber-300">"Pakem Framework"</span>,
   <span class="text-slate-400">"version"</span>: <span class="text-amber-300">"{{ version }}"</span>,
-  <span class="text-slate-400">"engine"</span>: <span class="text-amber-300">"Axum 0.7 + Tokio Async"</span>,
+  <span class="text-slate-400">"engine"</span>: <span class="text-amber-300">"Axum 0.8 + Tokio Async"</span>,
   <span class="text-slate-400">"database"</span>: {
     <span class="text-slate-400">"driver"</span>: <span class="text-amber-300">"{{ db_driver }}"</span>,
     <span class="text-slate-400">"status"</span>: <span class="text-amber-300">"{{ db_status }}"</span>

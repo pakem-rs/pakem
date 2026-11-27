@@ -37,16 +37,19 @@ Kunjungi aplikasi di browser 👉 **http://127.0.0.1:8000** 🎉
 - `canting make:model <Name>` — Membuat Model ORM & Berkas Migrasi
 - `canting make:crud <Name> [fields]` — Membuat fitur CRUD lengkap dalam 1 detik
 - `canting make:auth` — Membuat sistem autentikasi instan
+- `canting aurora:install` — Memasang starter kit autentikasi & dashboard **Pakem Aurora**
 - `canting make:live <Name>` — Membuat komponen reaktif Pakem Live
+- `canting key:generate` — Menghasilkan `APP_KEY` 256-bit untuk enkripsi & session
 - `canting migrate` — Menjalankan migrasi database
 - `canting tinker` — Terminal REPL interaktif model & database
 - `canting audit` — Audit keamanan dan postur konfigurasi aplikasi
+- `canting update` — Memperbarui dependensi proyek (`--pakem-only`)
 
 ---
 
 ## 📚 Dokumentasi
 Pelajari panduan lengkap dan tutorial berseri di portal resmi:  
-👉 **[https://pakem.my.id](https://pakem.my.id)** (atau [pakem-rs.github.io/docs](https://pakem-rs.github.io/docs/))
+👉 **[https://pakem.my.id](https://pakem.my.id)**
 
 ---
 

@@ -6,6 +6,17 @@ Format pencatatan mengacu pada [Keep a Changelog](https://keepachangelog.com/en/
 
 ---
 
+## [1.0.5] - 2026-11-27
+
+### 🎨 Rebranding Welcome & Upgrade Ekosistem 1.0.5
+- **Upgrade Core Framework**: Menggunakan `pakem = "1.0.5"` berbasis **Rust 2024 Edition** dan **Axum 0.8** stack.
+- **Logo & Identitas Visual Pekalongan**:
+  - Memasang logo SVG resmi **Pakem Canting** pada navbar [layouts/app.blade.rs](resources/views/layouts/app.blade.rs).
+  - Memperbarui hero copywriting pada [welcome.blade.rs](resources/views/welcome.blade.rs) dengan tema ketelitian canting dan batik Pekalongan (*"Crafted with Canting Precision. Driven by the Raw Speed of Rust."*).
+  - Menyelaraskan tampilan versi `Pakem 1.0.5`, `Rust 2024 Edition`, dan `Axum 0.8` pada dashboard welcome serta controller.
+
+---
+
 ## [1.0.1] - 2026-11-22
 
 ### 🎨 Rebranding Bersejarah: Pakem Starter Application Skeleton
